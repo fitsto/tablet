@@ -1,3 +1,53 @@
 page-home {
-
+    .content {
+        background-color: $gPrimary;
+        color: $gLight;
+    }
+    .scroll-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+        }
+        .formIngresoRut {
+            width: 100%;
+            max-width: 400px;
+        }
+        .label {
+            text-align: center;
+        }
+        .inputContent {
+            border: .2rem solid $gLight;
+            border-radius: 5px;
+            padding: .8rem;
+            position: relative;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            input {
+                font-size: 2rem;
+                text-align: center;
+            }
+            input::placeholder {
+                color: $gLight;
+            }
+            .btnIngresar {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: .2rem solid $gLight;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: -25px;
+                background-color: $gPrimary;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+        }
+    }
 }
