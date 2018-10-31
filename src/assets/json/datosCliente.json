@@ -1,0 +1,43 @@
+{
+    "indicadores": [{
+        "nomCliente": "ROCIO AMPARO",
+        "appPaterno": "CANTUARIAS",
+        "appMaterno": "RUBIO",
+        "claveInternet": 1,
+        "appPersonas": 1,
+        "appActualizada": 0,
+        "santanderPass": 0,
+        "webMobile": 1,
+        "usoDigital": 1,
+        "sacReclamo": 0,
+        "previred": 0,
+        "sii": 0,
+        "total": 44.4444
+    }],
+    "ofertas": [{
+            "nom_campania": "CSMO MAS TRADICIONAL NO ACREDITA",
+            "mto_oferta": 6000000,
+            "cod_moneda": "CLP"
+        },
+        {
+            "nom_campania": "Reconquista la Inversión TOP",
+            "mto_oferta": 0,
+            "cod_moneda": "CLP"
+        },
+        {
+            "nom_campania": "CAMBIATE A PLAN LANPASS",
+            "mto_oferta": 0,
+            "cod_moneda": "CLP"
+        },
+        {
+            "nom_campania": "ASEGURA SU SALUD",
+            "mto_oferta": 0,
+            "cod_moneda": "CLP"
+        },
+        {
+            "nom_campania": "APV RETAIL",
+            "mto_oferta": 0,
+            "cod_moneda": "CLP"
+        }
+    ]
+}

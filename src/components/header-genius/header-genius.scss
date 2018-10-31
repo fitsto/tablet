@@ -1,0 +1,32 @@
+header-genius {
+    width: 100%;
+    .logoHeader {
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        img {
+            height: 100%;
+        }
+    }
+    ion-icon[name="arrow-back"] {
+        justify-self: flex-start;
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        font-size: 3rem;
+    }
+    [ion-button] {
+        background-color: transparent;
+        padding: 0;
+        height: 36px;
+        width: 30px;
+        font-size: 3rem;
+        box-shadow: none;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+    [ion-button]:hover:not(.disable-hover) {
+        background-color: transparent;
+    }
+}

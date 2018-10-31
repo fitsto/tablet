@@ -1,0 +1,77 @@
+<ion-content>
+    <header-genius></header-genius>
+    <h3>Responder las siguientes preguntas para terminar</h3>
+    <div class="formEncuesta">
+        <ion-list>
+            <ion-item>
+                <ion-label>Perfil</ion-label>
+                <ion-select [(ngModel)]="genioService.dataGenio.encuesta.perfil">
+                    <ion-option value="co-Work">co-Work</ion-option>
+                    <ion-option value="Sucursal">Sucursal</ion-option>
+                    <ion-option value="cafetero">cafetero</ion-option>
+                    <ion-option value="curioso">curioso</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Es Cliente</ion-label>
+                <ion-select [(ngModel)]="genioService.dataGenio.encuesta.esCliente">
+                    <ion-option value="true">Si</ion-option>
+                    <ion-option value="false">No</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Sexo</ion-label>
+                <ion-select [(ngModel)]="genioService.dataGenio.encuesta.sexo">
+                    <ion-option value="Hombre">Hombre</ion-option>
+                    <ion-option value="Mujer">Mujer</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Rango de Edad</ion-label>
+                <ion-select [(ngModel)]="genioService.dataGenio.encuesta.edad">
+                    <ion-option value="<20">Menor a 20</ion-option>
+                    <ion-option value="20 - 30">Entre 20 y 30</ion-option>
+                    <ion-option value="30 - 40">Entre 30 y 40</ion-option>
+                    <ion-option value="40 - 50">Entre 40 y 50</ion-option>
+                    <ion-option value=">50">Mayor a 50</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>ocupacion</ion-label>
+                <ion-select [(ngModel)]="genioService.dataGenio.encuesta.ocupacion">
+                    <ion-option value="Emprendedor">Emprendedor</ion-option>
+                    <ion-option value="Dependiente">Dependiente</ion-option>
+                    <ion-option value="Independiente">Independiente</ion-option>
+                    <ion-option value="Estudiante">Estudiante</ion-option>
+                    <ion-option value="Otros">Otros</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Uso WorkCafe</ion-label>
+                <ion-select [(ngModel)]="genioService.dataGenio.encuesta.uso" multiple="true">
+                    <ion-option value="salas">salas</ion-option>
+                    <ion-option value="WIFI">WIFI</ion-option>
+                    <ion-option value="Cafeteria">Cafeteria</ion-option>
+                    <ion-option value="Totem">Totem</ion-option>
+                    <ion-option value="Ejecutivo">Ejecutivo</ion-option>
+                    <ion-option value="Cajero">Cajero</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-textarea placeholder="Resumen Atencion" [(ngModel)]="santanderService.resumenAtencion"></ion-textarea>
+            </ion-item>
+            <ion-item>
+                <ion-textarea placeholder="compromisos" [(ngModel)]="santanderService.compromisos"></ion-textarea>
+            </ion-item>
+        </ion-list>
+
+    </div>
+
+    <div class="flex jc-center btn-terminar">
+        <button ion-button color="light" outline (click)="enviarDataGenio()">Terminar</button>
+    </div>
+</ion-content>

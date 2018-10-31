@@ -1,0 +1,39 @@
+<ion-content>
+    <header-genius></header-genius>
+    <h3>Catalogo de productos</h3>
+    <div class="flex jc-center btn-producto">
+        <div *ngFor="let banca of productosService.bancas">
+            <button ion-button color="light" outline (click)="getProductos(banca.banca)">{{banca.banca}}</button>
+        </div>
+    </div>
+
+    <div class="flex jc-center btn-producto" *ngIf="productosService.productos.length > 0">
+        <div *ngFor="let producto of productosService.productos">
+            <button ion-button color="light" outline (click)="getSubProductos(producto.banca, producto.producto)">{{producto.producto}}</button>
+        </div>
+    </div>
+
+    <ion-slides pager *ngIf="productosService.subProductos.length > 0">
+        <ion-slide *ngFor="let subProducto of productosService.subProductos">
+            <div class="contentSubProducto">
+                <h2>{{subProducto.nombre}}</h2>
+                <div class="contenido">
+                    <span class="title">Beneficios: </span><span>
+                    {{subProducto.beneficios}}
+                </span>
+                </div>
+                <div class="contenido">
+                    <span class="title">Precio: </span><span>
+                      {{subProducto.precio}}
+                  </span>
+                </div>
+                <div class="contenido">
+                    <span class="title">Requisitos: </span><span>
+                        {{subProducto.requisitos}}
+                    </span>
+                </div>
+            </div>
+        </ion-slide>
+
+    </ion-slides>
+</ion-content>

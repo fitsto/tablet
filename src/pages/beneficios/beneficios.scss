@@ -1,0 +1,15 @@
+page-beneficios {
+    .scroll-content {
+        justify-content: flex-start;
+    }
+    ion-scroll {
+        width: 100%;
+        height: 90%;
+        .scroll-zoom-wrapper {
+            width: 90%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

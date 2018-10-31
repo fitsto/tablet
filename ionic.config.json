@@ -1,5 +1,7 @@
 {
   "name": "geniusBank",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

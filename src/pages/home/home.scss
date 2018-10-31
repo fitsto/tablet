@@ -1,16 +1,20 @@
 page-home {
-    .content {
-        background-color: $gPrimary;
-        color: $gLight;
-    }
+    background-image: url("../assets/imgs/footer.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
     .scroll-content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         .logo {
             font-size: 4rem;
-            margin-bottom: 3rem;
+            margin-bottom: 10rem;
+            margin-top: 25%;
+        }
+        .logoWc {
+            margin-top: auto;
         }
         .formIngresoRut {
             width: 100%;
@@ -18,34 +22,36 @@ page-home {
         }
         .label {
             text-align: center;
+            font-size: 2rem;
         }
         .inputContent {
-            border: .2rem solid $gLight;
+            border: .3rem solid $gLight;
             border-radius: 5px;
             padding: .8rem;
             position: relative;
-            margin-top: 1rem;
+            margin-top: 3rem;
             display: flex;
             align-items: center;
             input {
-                font-size: 2rem;
+                font-size: 4rem;
                 text-align: center;
             }
             input::placeholder {
                 color: $gLight;
+                font-size: 4rem;
             }
             .btnIngresar {
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
-                border: .2rem solid $gLight;
+                border: .3rem solid $gLight;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 position: absolute;
                 right: -25px;
                 background-color: $gPrimary;
-                font-size: 2rem;
+                font-size: 3rem;
                 cursor: pointer;
             }
         }

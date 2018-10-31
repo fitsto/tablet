@@ -1,0 +1,22 @@
+page-encuesta {
+    .scroll-content {
+        justify-content: flex-start;
+    }
+    .formEncuesta {
+        min-width: 300px;
+        margin-top: 3rem;
+        min-height: 550px;
+    }
+    h3 {
+        margin-top: 3rem;
+    }
+    .item {
+        margin-top: 1rem;
+    }
+    .btn-terminar {
+        height: 50px;
+    }
+    textarea::placeholder {
+        color: #fff!important;
+    }
+}

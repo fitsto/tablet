@@ -1,0 +1,31 @@
+<ion-content>
+    <header-genius></header-genius>
+
+    <div class="flex jc-center contentRutaEmprende">
+        <div class="contentItemRuta flex f-dir-col ai-center">
+            <div class="itemRuta flex ai-center al-self-start">
+                <div class="icono flex jc-center ai-center">
+                    <img src="assets/imgs/apoyate-en-nosotros_ico.png" alt="apoyate-en-nosotros_ico">
+                </div>
+                <div class="texto flex f-wrap-wrap jc-center text-center">Apoyate en nosotros</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-1 f-dir-col pad-5r">
+
+        <h4>Te permitirán, mediante soluciones innovadoras, realizar operaciones de cobertura de monedas y tasas de interés.</h4>
+
+        <ul>
+            <li (click)="goForward()">
+                <h3>Seguros de Cambio (Forward)</h3>
+            </li>
+            <li (click)="goSwapTasa()">
+                <h3>Swap de Tasas de Interés</h3>
+            </li>
+            <li (click)="goOpcionesFinancieras()">
+                <h3>Opciones Financieras</h3>
+            </li>
+        </ul>
+    </div>
+    <footer-genius inicio="RutaEmprendePage" texto="textUrl"></footer-genius>
+</ion-content>

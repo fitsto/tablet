@@ -1,0 +1,40 @@
+<ion-content>
+    <header-genius></header-genius>
+
+    <div class="flex jc-center contentRutaEmprende">
+        <div class="contentItemRuta flex f-dir-col ai-center">
+            <div class="itemRuta flex ai-center al-self-start">
+                <div class="icono flex jc-center ai-center">
+                    <img src="assets/imgs/maneja-tu-cuenta_ico.png" alt="maneja-tu-cuenta_ico">
+                </div>
+                <div class="texto flex f-wrap-wrap jc-center text-center">Maneja tu cuenta</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-1">
+        <ul>
+            <li (click)="goCartolaHistorica()">
+                <h3>Cartola Histórica</h3>
+            </li>
+            <li (click)="goCartolaTC()">
+                <h3>Cartola TC</h3>
+            </li>
+            <li (click)="goMovimientosTarjeta()">
+                <h3>Movimientos Tarjetas</h3>
+            </li>
+            <li (click)="goSaldosInversion()">
+                <h3>Saldos de Inversión</h3>
+            </li>
+            <li (click)="goValesVista()">
+                <h3>Vales Vista</h3>
+            </li>
+            <li (click)="goMillasAcumuladas()">
+                <h3>Millas Acumuladas</h3>
+            </li>
+            <li (click)="goTransferenciasHistoricas()">
+                <h3>Transferencias Históricas</h3>
+            </li>
+        </ul>
+    </div>
+    <footer-genius inicio="RutaDigitalPage" texto="textUrl"></footer-genius>
+</ion-content>

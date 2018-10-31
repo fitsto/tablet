@@ -1,0 +1,36 @@
+page-productos {
+    .scroll-content {
+        justify-content: flex-start;
+    }
+    h3 {
+        margin-top: 3rem;
+    }
+    .btn-producto {
+        margin-top: 3rem;
+    }
+    ion-slides {
+        height: 60%;
+        .swiper-pagination-bullet {
+            width: 15px;
+            height: 15px;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: $gLight;
+        }
+        .slide-zoom {
+            height: 100%;
+            .contentSubProducto {
+                height: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+                .contenido {
+                    margin-top: 2rem;
+                    text-align: left;
+                    .title {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

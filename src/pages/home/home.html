@@ -1,15 +1,14 @@
 <ion-content padding>
 
-    <div class="logo">Santander</div>
+    <div class="logo"><img src="assets/imgs/santander_logo.png" alt="Santander"></div>
 
 
     <div class="formIngresoRut">
         <div class="label">Ingrese rut a consultar</div>
         <div class="inputContent">
-            <ion-input type="text" placeholder="9.999.999-9" [(ngModel)]="rut"></ion-input>
-            <div class="btnIngresar" (click)="goPaginaCliente()">></div>
+            <ion-input type="text" placeholder="9.999.999-9" [(ngModel)]="rut" formato-rut (rutChange)="rutChange($event)" (keydown)="onKeydown($event)"></ion-input>
         </div>
+
+        <button ion-button block large color="secondary" (click)="goPaginaCliente()">Iniciar</button>
     </div>
-
-
 </ion-content>

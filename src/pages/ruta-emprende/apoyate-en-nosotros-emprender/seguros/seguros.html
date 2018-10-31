@@ -1,0 +1,36 @@
+<ion-content>
+    <header-genius></header-genius>
+
+    <div class="flex jc-center contentRutaEmprende">
+        <div class="contentItemRuta flex f-dir-col ai-center">
+            <div class="itemRuta flex ai-center al-self-start">
+                <div class="icono flex jc-center ai-center">
+                    <img src="assets/imgs/apoyate-en-nosotros_ico.png" alt="apoyate-en-nosotros_ico">
+                </div>
+                <div class="texto flex f-wrap-wrap jc-center text-center">Apoyate en nosotros</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-1">
+        <ul>
+            <li (click)="goMultiriesgo()">
+                <h3>Multiriesgo</h3>
+            </li>
+            <li (click)="goFraudePlus()">
+                <h3>Fraude Plus</h3>
+            </li>
+            <li (click)="goColectivo()">
+                <h3>Colectivo de Accidentes</h3>
+            </li>
+
+            <li (click)="goFlota()">
+                <h3>Flota</h3>
+            </li>
+
+            <li (click)="goVehiculos()">
+                <h3>Vehículos Pesados</h3>
+            </li>
+        </ul>
+    </div>
+    <footer-genius inicio="RutaEmprendePage" texto="textUrl"></footer-genius>
+</ion-content>

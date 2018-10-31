@@ -1,1 +1,18 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu side="right" [content]="content" id="rightMenu">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <p ion-item menuClose (click)="goDatosGenio()">Datos Genio</p>
+            <p ion-item menuClose (click)="goProductos()" *ngIf="1==0">Productos</p>
+            <p ion-item menuClose (click)="goBeneficios()">Beneficios</p>
+            <p ion-item menuClose *ngIf="1==0">Historial de Atenciones</p>
+            <p ion-item menuClose (click)="cerrarSesion()">Cerrar sesión Genio</p>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav #content [root]="rootPage"></ion-nav>

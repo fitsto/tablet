@@ -4,17 +4,77 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-content>
+    <header-genius></header-genius>
+    <div class="flex jc-start ai-center f-dir-col content-datos-cliente">
+        <h2>Datos Cliente</h2>
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Rut</ion-label>
+                <ion-input type="text" [(ngModel)]="clienteService.cliente.rut" formato-rut (rutChange)="rutChange($event)" (keydown)="onKeydown($event)"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Nombre</ion-label>
+                <ion-input type="text" [(ngModel)]="clienteService.cliente.nombre"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Apellido</ion-label>
+                <ion-input type="text" [(ngModel)]="clienteService.cliente.apellido"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input type="email" [(ngModel)]="clienteService.cliente.email"></ion-input>
+            </ion-item>
 
-    <ion-navbar>
-        <ion-title>cliente</ion-title>
-    </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-    <div>
-        <span>{{rut}}</span>
+            <ion-item>
+                <ion-label>¿Tiene algún plan que desee cumplir en el futuro cercano?</ion-label>
+                <ion-select [(ngModel)]="clienteService.cliente.planFuturo" multiple="true">
+                    <ion-option value="Viajar">Viajar</ion-option>
+                    <ion-option value="Comprar vivienda">Comprar vivienda</ion-option>
+                    <ion-option value="Ahorro Universidad">Ahorro Universidad</ion-option>
+                    <ion-option value="Ampliar/Remodelar vivienda">Ampliar/Remodelar vivienda</ion-option>
+                    <ion-option value="Comprar/Cambiar un auto">Comprar/Cambiar un auto</ion-option>
+                    <ion-option value="Asegurar tus ámbitos">Asegurar tus ámbitos</ion-option>
+                    <ion-option value="Emprender">Emprender</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
     </div>
+
+    <!-- <div class="flex jc-center">
+        <div class="contentPorDigital flex f-dir-col ai-center">
+            <div class="porDigital"><span class="num">{{clienteService.cliente.porcentajeDigital | number:'1.0-0'}}</span><span class="por">%</span></div>
+            <div class="barraPor flex jc-center ai-center">
+                <div class="barra">
+                    <div class="relleno" [style.width.%]="clienteService.cliente.porcentajeDigital"></div>
+                </div>
+            </div>
+            <div class="nombreCliente">
+                {{clienteService.cliente.nombre}} {{clienteService.cliente.apellido}}
+            </div>
+            <div class="rutCliente">{{clienteService.cliente.rut}}</div>
+        </div>
+    </div>
+
+    <div class="flex jc-center">
+        <div class="contentItemDigital flex f-wrap-wrap jc-sb">
+            <div class="itemDigital flex f-dir-col ai-center" (click)="goDigital()">
+                <div class="icono flex jc-center ai-center">
+                    <img src="assets/imgs/appPersonas.png" alt="appPersonas">
+                    <div class="indicador flex jc-center ai-center">
+                         <img src="assets/imgs/indicadorNo.png" alt="indicadorNo" *ngIf="cliente.indicadores.claveInternet == 0">
+                            <img src="assets/imgs/indicadorSi.png" alt="indicadorSi" *ngIf="cliente.indicadores.claveInternet == 1">
+                            <img src="assets/imgs/indicadorWarning.png" alt="indicadorWarning" *ngIf="cliente.indicadores.claveInternet == 2"> 
+                    </div>
+                </div>
+                <div class="texto flex f-wrap-wrap jc-center text-center">Digital</div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="flex jc-center">
+        <button ion-button color="light" outline (click)="goEncuesta()">Terminar Atención</button>
+    </div>
+
+
 </ion-content>

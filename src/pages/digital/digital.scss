@@ -1,0 +1,113 @@
+page-digital {
+    .scroll-content {
+        justify-content: flex-start;
+    }
+    .contentPorDigital {
+        margin-top: 4rem;
+        min-width: 250px;
+        .porDigital {
+            display: flex;
+            align-items: flex-start;
+            .num {
+                font-size: 7rem;
+                font-weight: 700;
+            }
+            .por {
+                font-weight: 700;
+                line-height: 6rem;
+                font-size: 2rem;
+            }
+        }
+        .barraPor {
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            .barra {
+                height: 30px;
+                border: 1px solid $gLight;
+                width: 80%;
+                height: 20px;
+                border-radius: 10px;
+                padding: 1px;
+                overflow: hidden;
+                .relleno {
+                    height: 100%;
+                    width: 0%;
+                    background-color: $gLight;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .nombreCliente {
+            font-size: 2rem;
+        }
+        .rutCliente {
+            font-size: 1.5rem;
+        }
+    }
+    /* contentPorDigital */
+    .contentItemDigital {
+        margin-top: 6rem;
+        width: 80%;
+    }
+    .contentFooter {
+        height: 20vh;
+        background-color: $gSecundary;
+    }
+    .footer {
+        width: 90%;
+        align-items: baseline;
+        padding: 2rem 0;
+        max-height: 200px;
+    }
+    .itemDigital {
+        width: 30%;
+        .indicador {
+            background-color: $gPrimary;
+        }
+    }
+    .itemDigital,
+    .itemFooter {
+        margin-bottom: 4rem;
+        .icono {
+            width: 13vw;
+            height: 13vw;
+            border: 2px solid $gLight;
+            border-radius: 50%;
+            position: relative;
+            margin-bottom: 1rem;
+            img {
+                max-width: 50%;
+            }
+            .indicador {
+                position: absolute;
+                top: 30%;
+                left: -15px;
+                border: 2px solid $gLight;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+            }
+        }
+        .texto {
+            font-size: 2rem;
+            // width: 60%;
+        }
+    }
+    .itemFooter {
+        margin-bottom: 0;
+        width: 24%;
+        .indicador {
+            background-color: $gSecundary;
+        }
+        .fondoIconOferta {
+            width: 10vw;
+            height: 10vw;
+            background-color: $gTercero;
+            border-radius: 50%;
+            img {
+                max-width: 80%;
+            }
+        }
+    }
+}

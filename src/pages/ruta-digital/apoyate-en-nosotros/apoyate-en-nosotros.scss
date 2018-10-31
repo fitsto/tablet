@@ -1,0 +1,50 @@
+page-apoyate-en-nosotros {
+    .contentRutaEmprende {
+        margin-top: 5rem;
+        width: 100%;
+        .contentItemRuta {
+            width: 100%;
+            .itemRuta {
+                width: 50%;
+                &.al-self-end {
+                    margin-right: 50px;
+                }
+                &.al-self-start {
+                    margin-left: 50px;
+                }
+                .texto {
+                    padding: 0 2rem;
+                }
+            }
+            .linea {
+                width: 50%;
+                height: 25px;
+                border-left: #fff dotted 4px;
+            }
+        }
+        .icono {
+            width: 13vw;
+            height: 13vw;
+            border: 2px solid $gLight;
+            border-radius: 50%;
+            position: relative;
+            // margin-bottom: 1rem;
+            img {
+                width: 50%;
+            }
+            .indicador {
+                position: absolute;
+                top: 30%;
+                left: -15px;
+                border: 2px solid $gLight;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+            }
+        }
+        .texto {
+            font-size: 2rem;
+            // width: 60%;
+        }
+    }
+}

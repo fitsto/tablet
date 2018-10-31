@@ -1,0 +1,111 @@
+<!--
+  Generated template for the DigitalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+
+<ion-content>
+    <header-genius></header-genius>
+
+    <div class="flex jc-center">
+        <div class="contentPorDigital flex f-dir-col ai-center">
+            <div class="porDigital"><span class="num">{{clienteService.cliente.porcentajeDigital | number:'1.0-0'}}</span><span class="por">%</span></div>
+            <div class="barraPor flex jc-center ai-center">
+                <div class="barra">
+                    <div class="relleno" [style.width.%]="clienteService.cliente.porcentajeDigital"></div>
+                </div>
+            </div>
+            <div class="nombreCliente">
+                {{clienteService.cliente.nombre}} {{clienteService.cliente.apellido}}
+            </div>
+            <div class="rutCliente">{{clienteService.cliente.rut}}</div>
+        </div>
+    </div>
+    <div class="flex jc-center">
+        <div class="contentItemDigital flex f-wrap-wrap jc-sb">
+            <div class="itemDigital flex f-dir-col ai-center" (click)="accionDigital('claveInternet')">
+                <div class="icono flex jc-center ai-center">
+                    <img src="assets/imgs/claveInternet.png" alt="claveInternet">
+                    <div class="indicador flex jc-center ai-center">
+                        <img src="assets/imgs/indicadorNo.png" alt="indicadorNo" *ngIf="clienteService.cliente.digital.claveInternet == 0">
+                        <img src="assets/imgs/indicadorSi.png" alt="indicadorSi" *ngIf="clienteService.cliente.digital.claveInternet == 1">
+                        <img src="assets/imgs/indicadorWarning.png" alt="indicadorWarning" *ngIf="clienteService.cliente.digital.claveInternet == 2">
+                    </div>
+                </div>
+                <div class="texto flex f-wrap-wrap jc-center text-center">Clave Internet</div>
+            </div>
+            <!-- itemDigital -->
+
+            <div class="itemDigital flex f-dir-col ai-center" (click)="accionDigital('appPersonas')">
+                <div class="icono flex jc-center ai-center">
+                    <img src="assets/imgs/appPersonas.png" alt="appPersonas">
+                    <div class="indicador flex jc-center ai-center">
+                        <img src="assets/imgs/indicadorNo.png" alt="indicadorNo" *ngIf="clienteService.cliente.digital.appPersonas == 0">
+                        <img src="assets/imgs/indicadorSi.png" alt="indicadorSi" *ngIf="clienteService.cliente.digital.appPersonas == 1">
+                        <img src="assets/imgs/indicadorWarning.png" alt="indicadorWarning" *ngIf="clienteService.cliente.digital.appPersonas == 2">
+                    </div>
+                </div>
+                <div class="texto flex f-wrap-wrap jc-center text-center">APP Persona</div>
+            </div>
+            <!-- itemDigital -->
+
+            <div class="itemDigital flex f-dir-col ai-center" (click)="accionDigital('santanderPass')">
+                <div class="icono flex jc-center ai-center">
+                    <img src="assets/imgs/santanderPass.png" alt="santanderPass">
+                    <div class="indicador flex jc-center ai-center">
+                        <img src="assets/imgs/indicadorNo.png" alt="indicadorNo" *ngIf="clienteService.cliente.digital.santanderPass == 0">
+                        <img src="assets/imgs/indicadorSi.png" alt="indicadorSi" *ngIf="clienteService.cliente.digital.santanderPass == 1">
+                        <img src="assets/imgs/indicadorWarning.png" alt="indicadorWarning" *ngIf="clienteService.cliente.digital.santanderPass == 2">
+                    </div>
+                </div>
+                <div class="texto flex f-wrap-wrap jc-center text-center">Santander Pass</div>
+            </div>
+            <!-- itemDigital -->
+
+            <div class="itemDigital flex f-dir-col ai-center" (click)="accionDigital('usoDigital')">
+                <div class="icono flex jc-center ai-center">
+                    <img src="assets/imgs/usoDigital.png" alt="usoDigital">
+                    <div class="indicador flex jc-center ai-center">
+                        <img src="assets/imgs/indicadorNo.png" alt="indicadorNo" *ngIf="clienteService.cliente.digital.usoDigital == 0">
+                        <img src="assets/imgs/indicadorSi.png" alt="indicadorSi" *ngIf="clienteService.cliente.digital.usoDigital == 1">
+                        <img src="assets/imgs/indicadorWarning.png" alt="indicadorWarning" *ngIf="clienteService.cliente.digital.usoDigital == 2">
+                    </div>
+                </div>
+                <div class="texto flex f-wrap-wrap jc-center text-center">Uso Digital</div>
+            </div>
+            <!-- itemDigital -->
+
+            <div class="itemDigital flex f-dir-col ai-center" (click)="accionDigital('previred')">
+                <div class="icono flex jc-center ai-center">
+                    <img src="assets/imgs/previred.png" alt="previred">
+                    <div class="indicador flex jc-center ai-center">
+                        <img src="assets/imgs/indicadorNo.png" alt="indicadorNo" *ngIf="clienteService.cliente.digital.previred == 0">
+                        <img src="assets/imgs/indicadorSi.png" alt="indicadorSi" *ngIf="clienteService.cliente.digital.previred == 1">
+                        <img src="assets/imgs/indicadorWarning.png" alt="indicadorWarning" *ngIf="clienteService.cliente.digital.previred == 2">
+                    </div>
+                </div>
+                <div class="texto flex f-wrap-wrap jc-center text-center">Previred</div>
+            </div>
+            <!-- itemDigital -->
+
+            <div class="itemDigital flex f-dir-col ai-center" (click)="accionDigital('sii')">
+                <div class="icono flex jc-center ai-center">
+                    <img src="assets/imgs/sii.png" alt="sii">
+                    <div class="indicador flex jc-center ai-center">
+                        <img src="assets/imgs/indicadorNo.png" alt="indicadorNo" *ngIf="clienteService.cliente.digital.sii == 0">
+                        <img src="assets/imgs/indicadorSi.png" alt="indicadorSi" *ngIf="clienteService.cliente.digital.sii == 1">
+                        <img src="assets/imgs/indicadorWarning.png" alt="indicadorWarning" *ngIf="clienteService.cliente.digital.sii == 2">
+                    </div>
+                </div>
+                <div class="texto flex f-wrap-wrap jc-center text-center">SII</div>
+            </div>
+            <!-- itemDigital -->
+        </div>
+        <!-- contentItemDigital -->
+
+    </div>
+</ion-content>

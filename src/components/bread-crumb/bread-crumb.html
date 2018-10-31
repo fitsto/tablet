@@ -1,0 +1,5 @@
+<!-- Generated template for the BreadCrumbComponent component -->
+<div *ngFor="let bread of breads" class="flex ai-center">
+    <span (click)="goBread(bread.idx,bread.link)">{{bread.texto}}</span>
+    <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" *ngIf="bread.link"></ion-icon>
+</div>
