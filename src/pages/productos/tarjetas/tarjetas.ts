@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DetallePage } from '../../detalle/detalle';
 
 /**
  * Generated class for the TarjetasPage page.
@@ -21,6 +22,48 @@ export class TarjetasPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TarjetasPage');
+  }
+
+  goGold(){
+    this.navCtrl.push(DetallePage,{
+      html:'assets/htmls/productos/tarjetas/tajetas_gold.html',
+      textUrl: 'Gold'
+    });
+  }
+
+  goLife(){
+    this.navCtrl.push(DetallePage,{
+      html:'assets/htmls/productos/tarjetas/tajetas_life.html',
+      textUrl: 'Life'
+    });
+  }
+
+  goLimited(){
+    this.navCtrl.push(DetallePage,{
+      html:'assets/htmls/productos/tarjetas/tajetas_limited.html',
+      textUrl: 'Limited'
+    });
+  }
+
+  goPlatinium(){
+    this.navCtrl.push(DetallePage,{
+      html:'assets/htmls/productos/tarjetas/tajetas_platinum.html',
+      textUrl: 'Platinium'
+    });
+  }
+
+  goSuperPuntos(){
+    this.navCtrl.push(DetallePage,{
+      html:'assets/htmls/productos/tarjetas/tajetas_super_puntos.html',
+      textUrl: 'Super Puntos'
+    });
+  }
+
+  goWorldMember(){
+    this.navCtrl.push(DetallePage,{
+      html:'assets/htmls/productos/tarjetas/tajetas_world_member.html',
+      textUrl: 'World Member'
+    });
   }
 
 }
