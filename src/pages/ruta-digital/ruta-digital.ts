@@ -30,22 +30,20 @@ export class RutaDigitalPage {
   loadPage(url:string):void{
     var loader = $('#page_loader');
   //debugger;
-    $('body').fadeOut(function(){
+
       $(loader).load( 'assets/pages/' + url, function(responseTxt, statusTxt, xhr){
-  
-        $('body').fadeIn();
   
         if(statusTxt === "error"){
           console.log("Error: " + xhr.status + ": " + xhr.statusText);
         }
   
       });
-    });
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RutaDigitalPage');
-    //this.loadPage('index.html');
+    this.loadPage('index.html');
   }
 
   
