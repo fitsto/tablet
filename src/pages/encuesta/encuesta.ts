@@ -39,7 +39,13 @@ export class EncuestaPage {
     this.genioService.dataGenio.genio.telefono = this.genioService.genio.telefono;
     this.genioService.dataGenio.genio.nombre = this.genioService.genio.nombre;
     
+    //console.log(this.genioService.dataGenio,this.genioService.genio,this.ClienteService.cliente);
+    //console.log('dataGenio',JSON.stringify(this.genioService.dataGenio));
+    //console.log('genio',JSON.stringify(this.genioService.genio));
+    //console.log('cliente',JSON.stringify(this.ClienteService.cliente));
+
     // watch network for a disconnect
+    
     if (this.genioService.conectado) {
       this.genioService.enviarDatos();
     }

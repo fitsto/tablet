@@ -5,7 +5,7 @@ import { ComponentsModule } from '../../../components/components.module';
 import { ComexPageModule } from './comex/comex.module';
 import { ProductosDerivadosPageModule } from './productos-derivados/productos-derivados.module';
 import { TarjetasDeCreditoPageModule } from './tarjetas-de-credito/tarjetas-de-credito.module';
-import { SegurosPageModule } from './seguros/seguros.module';
+import { SegurosEmprendePageModule } from './seguros/seguros.module';
 import { FinanciamientoPageModule } from './financiamiento/financiamiento.module';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { FinanciamientoPageModule } from './financiamiento/financiamiento.module
     ComexPageModule,
     ProductosDerivadosPageModule,
     TarjetasDeCreditoPageModule,
-    SegurosPageModule,
+    SegurosEmprendePageModule,
     FinanciamientoPageModule
   ],
   entryComponents: [

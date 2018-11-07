@@ -14,8 +14,9 @@ import { ApoyateEnNosotrosPage } from './apoyate-en-nosotros/apoyate-en-nosotros
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
+declare var $:any;
 @IonicPage()
+
 @Component({
   selector: 'page-ruta-digital',
   templateUrl: 'ruta-digital.html',
@@ -24,10 +25,30 @@ export class RutaDigitalPage {
   textUrl:string = 'Digitalízate';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+  
+
+  loadPage(url:string):void{
+    var loader = $('#page_loader');
+  //debugger;
+    $('body').fadeOut(function(){
+      $(loader).load( 'assets/pages/' + url, function(responseTxt, statusTxt, xhr){
+  
+        $('body').fadeIn();
+  
+        if(statusTxt === "error"){
+          console.log("Error: " + xhr.status + ": " + xhr.statusText);
+        }
+  
+      });
+    });
+  }
 
   ionViewDidLoad() {
-    //console.log('ionViewDidLoad RutaDigitalPage');
+    console.log('ionViewDidLoad RutaDigitalPage');
+    //this.loadPage('index.html');
   }
+
+  
 
   goActiva():void{
     this.navCtrl.push(ActivaProductosPage);

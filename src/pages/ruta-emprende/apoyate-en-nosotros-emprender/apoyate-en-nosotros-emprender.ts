@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FinanciamientoPage } from './financiamiento/financiamiento';
-import { SegurosPage } from './seguros/seguros';
+import { SegurosEmprendePage } from './seguros/seguros';
 import { TarjetasDeCreditoPage } from './tarjetas-de-credito/tarjetas-de-credito';
 import { DetallePage } from '../../detalle/detalle';
 import { ProductosDerivadosPage } from './productos-derivados/productos-derivados';
@@ -33,7 +33,7 @@ export class ApoyateEnNosotrosEmprenderPage {
   }
 
   goSeguros():void{
-    this.navCtrl.push(SegurosPage);
+    this.navCtrl.push(SegurosEmprendePage);
   }
 
   goTarjetaCredito():void{

@@ -14,7 +14,8 @@ import { DetallePage } from '../../../detalle/detalle';
   selector: 'page-seguros',
   templateUrl: 'seguros.html',
 })
-export class SegurosPage {
+
+export class SegurosEmprendePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

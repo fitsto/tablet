@@ -273,9 +273,9 @@ export class SantanderServiceProvider {
     datos.encuesta.resumenAtencion = this.resumenAtencion;
     datos.encuesta.compromisos = this.resumenAtencion;
     datos.conectado = conectado;
-    console.log(datos);
-    console.log(JSON.stringify(datos));
-    console.log(this.db);
+    //console.log(datos);
+    //console.log(JSON.stringify(datos));
+    //console.log(this.db);
     if(!this.db){
       this.toastService.presentToast('No se guardaron los datos de forma local');
       return;
