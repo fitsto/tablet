@@ -31,6 +31,8 @@ export class EncuestaPage {
 
   ionViewDidLoad() {
     //console.log('ionViewDidLoad EncuestaPage');
+    this.santanderService.resumenAtencion = '';
+    this.santanderService.compromisos = '';
   }
 
   enviarDataGenio():void{
