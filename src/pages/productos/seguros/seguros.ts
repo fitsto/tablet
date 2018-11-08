@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DetallePage } from '../../detalle/detalle';
 
 /**
  * Generated class for the SegurosPage page.
@@ -20,6 +21,13 @@ export class SegurosPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SegurosPage');
+  }
+
+  goSeguro(html:string, textUrl:string):void{
+    this.navCtrl.push(DetallePage,{
+      html:`assets/htmls/productos/seguros/${html}.html`,
+      textUrl: textUrl
+    });
   }
 
 }
