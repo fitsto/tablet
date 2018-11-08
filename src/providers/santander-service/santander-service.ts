@@ -15,8 +15,8 @@ import { ToastServiceProvider } from '../toast-service/toast-service';
 @Injectable()
 export class SantanderServiceProvider {
   
-  public resumenAtencion:string = '';
-  public compromisos:string = '';
+  /*public resumenAtencion:string = '';
+  public compromisos:string = '';*/
   dataGenio:genioModel;
   
   db: SQLiteObject = null;
@@ -270,8 +270,9 @@ export class SantanderServiceProvider {
     this.dataGenio.cliente = cliente;
     
     let datos:any = this.dataGenio;
-    datos.encuesta.resumenAtencion = this.resumenAtencion;
-    datos.encuesta.compromisos = this.resumenAtencion;
+    /*datos.encuesta.resumenAtencion = this.resumenAtencion;
+    datos.encuesta.compromisos = this.resumenAtencion;*/
+    //console.log(datos.encuesta);
     datos.conectado = conectado;
     //console.log(datos);
     //console.log(JSON.stringify(datos));
