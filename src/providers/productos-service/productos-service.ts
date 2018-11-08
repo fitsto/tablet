@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from 'angularfire2/firestore';
 import { map } from 'rxjs/operators';
 
 /*
@@ -14,25 +13,25 @@ export class ProductosServiceProvider {
   bancas:any[] = [];
   productos:any[] = [];
   subProductos:any[] = [];
-  constructor(public http: HttpClient, public db: AngularFirestore) {
+  constructor(public http: HttpClient) {
     console.log('Hello ProductosServiceProvider Provider');
   }
 
   getBancas():void{
     this.productos = [];
     this.subProductos = [];
-    this.db.collection<any[]>('productos').valueChanges().subscribe((bancas)=>{
+    /*this.db.collection<any[]>('productos').valueChanges().subscribe((bancas)=>{
       this.bancas = bancas;
       //console.log(bancas);
     },
     error => {
       console.log(error);
-    });
+    });*/
   }
   
   getProductos(banca:string):void{
     this.subProductos = [];
-    this.db.collection<any[]>(`/productos/${banca}/productos_${banca}`).valueChanges()
+    /*this.db.collection<any[]>(`/productos/${banca}/productos_${banca}`).valueChanges()
     .pipe(
       map((productos:any) => {
         for (let index = 0; index < productos.length; index++) {
@@ -48,14 +47,14 @@ export class ProductosServiceProvider {
     },
     error => {
       console.log(error);
-    });
+    });*/
   }
 
   getSubProductos(banca:string, producto:string){
-    this.db.collection<any[]>(`/productos/${banca}/productos_${banca}/${producto}/${producto}_productos_${banca}`).valueChanges()
+    /*this.db.collection<any[]>(`/productos/${banca}/productos_${banca}/${producto}/${producto}_productos_${banca}`).valueChanges()
     .subscribe((subProducto)=>{
       this.subProductos = subProducto;
       //console.log(subProducto);
-    });
+    });*/
   }
 }

@@ -13,10 +13,8 @@ import { HeaderGeniusComponent } from '../components/header-genius/header-genius
 import { RutProvider } from '../providers/rut/rut';
 import { GenioServiceProvider } from '../providers/genio-service/genio-service';
 import { ToastServiceProvider } from '../providers/toast-service/toast-service';
-import { AngularFireModule } from 'angularfire2';
 import { FirebaseConfig } from '../environments/firebase.config';
 import { ProductosServiceProvider } from '../providers/productos-service/productos-service';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FooterGeniusComponent } from '../components/footer-genius/footer-genius';
 import { BreadCrumbComponent } from '../components/bread-crumb/bread-crumb';
 import { CreaTuEmpresaPageModule } from '../pages/ruta-emprende/crea-tu-empresa/crea-tu-empresa.module';
@@ -50,8 +48,6 @@ import { RutaEmprendePageModule } from '../pages/ruta-emprende/ruta-emprende.mod
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-    AngularFireModule.initializeApp(FirebaseConfig.firebase),
-    AngularFirestoreModule,
     DirectivesModule,
     CreaTuEmpresaPageModule,
     IniciaActividadesPageModule,
