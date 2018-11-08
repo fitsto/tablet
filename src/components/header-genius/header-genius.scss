@@ -8,6 +8,9 @@ header-genius {
             height: 100%;
         }
     }
+    .logoHeader.light {
+        color: $gPrimary;
+    }
     ion-icon[name="arrow-back"] {
         justify-self: flex-start;
         position: absolute;
@@ -28,5 +31,8 @@ header-genius {
     }
     [ion-button]:hover:not(.disable-hover) {
         background-color: transparent;
+    }
+    .light ion-icon.icon.icon-md.ion-md-menu {
+        color: $gPrimary;
     }
 }

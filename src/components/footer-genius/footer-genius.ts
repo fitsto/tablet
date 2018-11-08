@@ -15,6 +15,7 @@ import { ClientePage } from '../../pages/cliente/cliente';
 export class FooterGeniusComponent{
   @Input() public inicio:any ;
   @Input() public texto:string;
+  @Input() public theme:string = 'default';
 
   constructor(public navCtrl: NavController) {
     

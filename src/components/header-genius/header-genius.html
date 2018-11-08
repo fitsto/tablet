@@ -1,8 +1,9 @@
 <!-- Generated template for the HeaderGeniusComponent component -->
-<div class="logoHeader">
+<div class="logoHeader" [ngClass]="theme">
     <ion-icon name="arrow-back" (click)="goBack()" *ngIf="back"></ion-icon>
-    <img src="assets/imgs/santander_logo.png" alt="Santander">
-    <button ion-button menuToggle="rightMenu">
+    <img *ngIf="theme != 'light'" src="assets/imgs/santander_logo.png" alt="Santander">
+    <img *ngIf="theme == 'light'" src="assets/imgs/santander_logo_red.png" alt="Santander">
+    <button ion-button menuToggle="rightMenu" [ngClass]="theme">
             <ion-icon name="menu"></ion-icon>
     </button>
 </div>

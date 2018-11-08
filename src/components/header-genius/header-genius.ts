@@ -15,6 +15,8 @@ export class HeaderGeniusComponent {
 
   text: string;
   @Input() back:boolean = true;
+  @Input() public theme:string = 'default';
+  
   constructor(public navCtrl: NavController) {
   }
 

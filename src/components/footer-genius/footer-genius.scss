@@ -4,4 +4,10 @@ footer-genius {
     ion-icon {
         font-size: 5rem;
     }
+    .light bread-crumb {
+        color: $gPrimary;
+    }
+    .light ion-icon.icon.icon-md.ion-md-person {
+        color: $gPrimary;
+    }
 }
