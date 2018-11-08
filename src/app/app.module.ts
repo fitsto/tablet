@@ -13,7 +13,6 @@ import { HeaderGeniusComponent } from '../components/header-genius/header-genius
 import { RutProvider } from '../providers/rut/rut';
 import { GenioServiceProvider } from '../providers/genio-service/genio-service';
 import { ToastServiceProvider } from '../providers/toast-service/toast-service';
-import { FirebaseConfig } from '../environments/firebase.config';
 import { ProductosServiceProvider } from '../providers/productos-service/productos-service';
 import { FooterGeniusComponent } from '../components/footer-genius/footer-genius';
 import { BreadCrumbComponent } from '../components/bread-crumb/bread-crumb';
