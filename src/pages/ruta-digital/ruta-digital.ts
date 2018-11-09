@@ -31,7 +31,7 @@ export class RutaDigitalPage {
     var loader = $('#page_loader');
   //debugger;
 
-      $(loader).load( 'assets/pages/' + url, function(responseTxt, statusTxt, xhr){
+      $(loader).load( 'assets/pages/digitalizate/' + url, function(responseTxt, statusTxt, xhr){
   
         if(statusTxt === "error"){
           console.log("Error: " + xhr.status + ": " + xhr.statusText);

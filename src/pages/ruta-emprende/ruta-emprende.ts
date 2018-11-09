@@ -15,6 +15,7 @@ import { PotenciaTuNegocioPage } from './potencia-tu-negocio/potencia-tu-negocio
  * Ionic pages and navigation.
  */
 
+declare var $:any;
 @IonicPage()
 @Component({
   selector: 'page-ruta-emprende',
@@ -27,7 +28,44 @@ export class RutaEmprendePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RutaEmprendePage');
+    //console.log('ionViewDidLoad RutaEmprendePage');
+    this.loadEmprendePage('index.html');
+    let window_width = $(window).width();
+    setTimeout(function(){
+      $('.steps li.active').each(function(i,e){
+        $(this).fadeTo(0,0).delay(300*i).fadeTo(300,1);
+      });
+  
+      $('body').fadeIn();
+  
+      if( window_width <= 768 ){
+        //this.normalizeHeight( $('.steps li') );
+      }
+    }, 300);
+  }
+
+  loadEmprendePage(url:string):void{
+    var loader = $('#page_emprende_loader');
+  //debugger;
+
+      $(loader).load( 'assets/pages/emprende/' + url, function(responseTxt, statusTxt, xhr){
+  
+        if(statusTxt === "error"){
+          console.log("Error: " + xhr.status + ": " + xhr.statusText);
+        }
+  
+      });
+
+  }
+
+  normalizeHeight( items ){
+    $(items).each(function(i, e){
+      var width = $(e).width();
+      console.log( width );
+      if( width !== 0 ){
+        $(e).css('height', width + 'px');
+      }
+    });
   }
 
   goCreaTuEmpresa():void{

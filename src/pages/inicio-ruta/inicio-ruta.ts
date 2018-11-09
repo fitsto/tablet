@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RutaDigitalPage } from '../ruta-digital/ruta-digital';
 import { RutaEmprendePage } from '../ruta-emprende/ruta-emprende';
+import { GenioServiceProvider } from '../../providers/genio-service/genio-service';
 
 /**
  * Generated class for the InicioRutaPage page.
@@ -17,7 +18,7 @@ import { RutaEmprendePage } from '../ruta-emprende/ruta-emprende';
 })
 export class InicioRutaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public genioService: GenioServiceProvider) {
   }
 
   ionViewDidLoad() {
@@ -26,9 +27,17 @@ export class InicioRutaPage {
   
   goRutaEmprende():void{
     this.navCtrl.push(RutaEmprendePage);
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'Ruta Emprende',
+      subProducto: ''
+    });
   }
 
   goRutaDigital():void{
     this.navCtrl.push(RutaDigitalPage);
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'Ruta Digital',
+      subProducto: ''
+    });
   }
 }

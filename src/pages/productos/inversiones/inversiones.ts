@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DetallePage } from '../../detalle/detalle';
+import { GenioServiceProvider } from '../../../providers/genio-service/genio-service';
 
 /**
  * Generated class for the InversionesPage page.
@@ -17,7 +18,7 @@ import { DetallePage } from '../../detalle/detalle';
 
 export class InversionesPage {
   textUrl:string = 'Inversiones';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public genioService:GenioServiceProvider) {
   }
 
   ionViewDidLoad() {
@@ -29,12 +30,21 @@ export class InversionesPage {
       html:'assets/htmls/productos/inversiones/inversiones_ACCIONES.html',
       textUrl: 'Acciones'
     });
+
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'inversiones',
+      subProducto: 'Acciones'
+    });
   }
 
   goApv():void{
     this.navCtrl.push(DetallePage,{
       html:'assets/htmls/productos/inversiones/inversiones_APV.html',
       textUrl: 'APV'
+    });
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'inversiones',
+      subProducto: 'APV'
     });
   }
 
@@ -43,12 +53,20 @@ export class InversionesPage {
       html:'assets/htmls/productos/inversiones/inversiones_DAP.html',
       textUrl: 'DAP'
     });
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'inversiones',
+      subProducto: 'DAP'
+    });
   }
 
   goFfmm():void{
     this.navCtrl.push(DetallePage,{
       html:'assets/htmls/productos/inversiones/inversiones_FFMM.html',
       textUrl: 'FFMM'
+    });
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'inversiones',
+      subProducto: 'FFMM'
     });
   }
 

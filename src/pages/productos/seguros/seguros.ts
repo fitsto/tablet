@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DetallePage } from '../../detalle/detalle';
+import { GenioServiceProvider } from '../../../providers/genio-service/genio-service';
 
 /**
  * Generated class for the SegurosPage page.
@@ -16,7 +17,7 @@ import { DetallePage } from '../../detalle/detalle';
 })
 export class SegurosPage {
   textUrl:string = 'Seguros';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public genioService:GenioServiceProvider) {
   }
 
   ionViewDidLoad() {
@@ -27,6 +28,10 @@ export class SegurosPage {
     this.navCtrl.push(DetallePage,{
       html:`assets/htmls/productos/seguros/${html}.html`,
       textUrl: textUrl
+    });
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'Seguros',
+      subProducto: textUrl
     });
   }
 

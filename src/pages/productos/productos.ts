@@ -6,6 +6,7 @@ import { InversionesPage } from './inversiones/inversiones';
 import { PlanesPage } from './planes/planes';
 import { SegurosPage } from './seguros/seguros';
 import { TarjetasPage } from './tarjetas/tarjetas';
+import { GenioServiceProvider } from '../../providers/genio-service/genio-service';
 
 /**
  * Generated class for the ProductosPage page.
@@ -21,7 +22,11 @@ import { TarjetasPage } from './tarjetas/tarjetas';
 })
 export class ProductosPage {
   textUrl:string = 'Productos';
-  constructor(public navCtrl: NavController, public navParams: NavParams, public productosService: ProductosServiceProvider) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public productosService: ProductosServiceProvider,
+    public genioService: GenioServiceProvider) {
   }
 
   ionViewDidLoad() {
@@ -40,21 +45,41 @@ export class ProductosPage {
 
   goCreditos():void{
     this.navCtrl.push(CreditosPage);
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'Creditos',
+      subProducto: ''
+    });
   }
 
   goInversiones():void{
     this.navCtrl.push(InversionesPage);
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'Inversiones',
+      subProducto: ''
+    });
   }
 
   goPlanes():void{
     this.navCtrl.push(PlanesPage);
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'Planes',
+      subProducto: ''
+    });
   }
 
   goSeguros():void{
     this.navCtrl.push(SegurosPage);
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'Seguros',
+      subProducto: ''
+    });
   }
 
   goTarjetas():void{
     this.navCtrl.push(TarjetasPage);
+    this.genioService.dataGenio.intereses.push({
+      poducto: 'Tarjetas',
+      subProducto: ''
+    });
   }
 }
