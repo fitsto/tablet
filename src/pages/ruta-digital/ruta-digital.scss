@@ -1,6 +1,6 @@
 page-ruta-digital {
     ion-scroll {
-        max-height: 670px;
+        max-height: 900px;
     }
     background-color: #fff;
     .contentRutaDigital {
@@ -219,7 +219,7 @@ page-ruta-digital {
         margin: 15px 0;
     }
     .cont_autoriza, .cont_maneja, .cont_gestiona, .cont_organiza, .cont_disfruta, .cont_apoyate{
-        max-height: 500px;
+        max-height: 700px;
         overflow-y: auto;
         .cont_blanco{
             height: auto;
@@ -232,7 +232,7 @@ page-ruta-digital {
         border-radius: 5px;
         box-shadow: 0 0 5px 0px rgba(0, 0, 0, .2);
         margin-bottom: 15px;
-        height: 480px;
+        height: 675px;
         overflow-y: auto;
     }
     .cont_blanco:last-of-type {
