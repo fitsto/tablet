@@ -31,8 +31,8 @@ export class EncuestaPage {
 
   ionViewDidLoad() {
     //console.log('ionViewDidLoad EncuestaPage');
-    this.santanderService.resumenAtencion = '';
-    this.santanderService.compromisos = '';
+    /*this.santanderService.resumenAtencion = '';
+    this.santanderService.compromisos = '';*/
   }
 
   enviarDataGenio():void{
@@ -47,6 +47,8 @@ export class EncuestaPage {
     //console.log('cliente',JSON.stringify(this.ClienteService.cliente));
 
     // watch network for a disconnect
+
+    //console.log(this.genioService.dataGenio);
     
     if (this.genioService.conectado) {
       this.genioService.enviarDatos();

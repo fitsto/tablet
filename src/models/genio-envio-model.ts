@@ -21,6 +21,8 @@ export class genioEnvioModel{
       encuesta.sexo = '';
       encuesta.ocupacion = '';
       encuesta.uso = [];
+      encuesta.resumenAtencion = '';
+      encuesta.compromisos = '';
       this.intereses = [];
     }
   }
