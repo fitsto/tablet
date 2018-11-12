@@ -1,3 +1,14 @@
+<script>
+    function loadPage(url) {
+        var loader = $('#page_loader');
+
+        $(loader).load('assets/pages/digitalizate/' + url, function(responseTxt, statusTxt, xhr) {
+            if (statusTxt === "error") {
+                console.log("Error: " + xhr.status + ": " + xhr.statusText);
+            }
+        });
+    }
+</script>
 <ul class="steps">
     <li>
         <a href="#" onclick="loadPage('activa-tus-productos/index.html'); return false;">

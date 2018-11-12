@@ -1,3 +1,132 @@
+<script>
+    function loadEmprendePage(url) {
+        var loaderEmprende = $('#page_emprende_loader');
+
+        $(loaderEmprende).load('assets/pages/emprende/' + url, function(responseTxt, statusTxt, xhr) {
+
+            var window_width = $(window).width();
+            setTimeout(function() {
+                $('.steps li.active').each(function(i, e) {
+                    $(this).fadeTo(0, 0).delay(300 * i).fadeTo(300, 1);
+                });
+
+                $('body').fadeIn();
+
+                if (window_width <= 768) {
+                    normalizeHeight($('.steps li'));
+                }
+            }, 300);
+
+            if (statusTxt === "error") {
+                console.log("Error: " + xhr.status + ": " + xhr.statusText);
+            }
+
+        });
+
+        /*$(document).on('click', 'page-ruta-emprende a', function(evt) {
+            alert(1);
+            var url = $(evt.currentTarget).attr('href');
+            if (!url) return;
+            if (url.indexOf('www') > -1) return;
+            evt.preventDefault();
+            if (url.indexOf('#') > -1) return;
+            loadEmprendePage(url);
+        });*/
+
+        function checkInput(input, event = null) {
+            var value = $(input).val();
+            var resp;
+
+            if (value !== '' || value.length > 0) {
+                // Si se ingreso algo
+
+                if ($(input).is(':invalid')) {
+                    // si es invalido
+                    $(input).removeClass('valid');
+                    $(input).addClass('invalid');
+                    $(input).parent().parent().addClass('invalid');
+                    resp = false;
+                } else {
+                    // Si es correcto
+                    $(input).addClass('valid');
+                    $(input).removeClass('invalid');
+                    $(input).parent().parent().removeClass('invalid');
+                    resp = true;
+                }
+            } else {
+                // Si no se ingreso nada
+                if (event !== false) {
+                    $(input).parent().parent().addClass('invalid');
+                    $(input).removeClass('valid');
+                    $(input).removeClass('invalid');
+                    resp = false;
+                }
+            }
+
+            return resp;
+        }
+
+        function normalizeHeight(items) {
+            $(items).each(function(i, e) {
+                var width = $(e).width();
+                console.log(width);
+                if (width !== 0) {
+                    $(e).css('height', width + 'px');
+                }
+            });
+        }
+
+        $(window).resize(function() {
+            normalizeHeight($('.steps li'));
+        });
+
+
+        $(document).on('click', 'page-ruta-emprende .dropdown-header', function(e) {
+            e.preventDefault();
+
+            var parent = $(this).parent();
+            var content = $('.dropdown-content', parent);
+
+            if ($(content).is(':visible')) {
+                $(content).slideUp(function() {
+                    $(parent).removeClass('active');
+                });
+            } else {
+                $('.dropdown-content').slideUp();
+                $(content).slideDown(function() {
+                    $('.dropdown').removeClass('active');
+                    $(parent).addClass('active');
+                });
+            }
+        });
+
+        $(document).on('click', 'page-ruta-emprende .return-false', function(e) {
+            e.preventDefault();
+        });
+
+        $(document).on('click', 'page-ruta-emprende .formulario input[type="submit"]', function(e) {
+            e.preventDefault();
+            var valid;
+
+            $('.formulario input').each(function(i, e) {
+                var input = e;
+                var type = $(input).attr('type');
+
+                if (type !== 'submit' && type !== 'hidden') {
+                    if (checkInput($(input)) === true) {
+                        valid = true;
+                    } else {
+                        valid = false;
+                    }
+                }
+            });
+
+            if (valid === true) {
+                $('.formulario').submit();
+            }
+        });
+    }
+</script>
 <header>
     <div class="container">
         <div class="steps_cont">
@@ -37,7 +166,7 @@
                     </a>
                 </div>
                 <div class="steps step-2">
-                    <a href="tips-para-empezar.html" class="faded-link">
+                    <a href="#" class="faded-link" onclick="loadEmprendePage('tips-para-empezar.html'); return false;">
                         <img src="assets/imgs/icono-tips.png" alt="Algunos tips para empezar">
                         <span>Algunos tips para empezar</span>
                     </a>
@@ -48,7 +177,7 @@
                     </a>
                 </div>
                 <div class="steps step-4">
-                    <a href="tu-empresa-en-un-dia.html" class="faded-link">
+                    <a href="#" onclick="loadEmprendePage('tu-empresa-en-un-dia.html'); return false;" class="faded-link">
                         <img src="assets/imgs/icono-empresa-en-un-dia.png" alt="Tu empresa en 1 día">
                         <span>Tu empresa en 1 día</span>
                     </a>
@@ -59,13 +188,13 @@
                     </a>
                 </div>
                 <div class="steps step-6">
-                    <a href="inicio-de-actividades.html" class="faded-link">
+                    <a href="#" onclick="loadEmprendePage('inicio-de-actividades.html'); return false;" class="faded-link">
                         <img src="assets/imgs/icono-sii.png" alt="Inicio de actividades">
                         <span>Inicio de actividades</span>
                     </a>
                 </div>
                 <div class="steps step-7">
-                    <a href="abre-tu-cuenta.html" class="faded-link">
+                    <a href="#" onclick="loadEmprendePage('abre-tu-cuenta.html'); return false;" class="faded-link">
                         <img src="assets/imgs/icono-abre-tu-cuenta.png" alt="Abre tu cuenta">
                         <span>Abre tu cuenta</span>
                     </a>
@@ -77,13 +206,13 @@
                     </a>
                 </div>
                 <div class="steps step-9">
-                    <a href="activa-tu-toolkit-digital.html" class="faded-link">
+                    <a href="#" onclick="loadEmprendePage('activa-tu-toolkit-digital.html'); return false;" class="faded-link">
                         <img src="assets/imgs/icono-activa-tu-toolkit.png" alt="Activa tu toolkit digital">
                         <span>Activa tu toolkit digital</span>
                     </a>
                 </div>
                 <div class="steps step-10">
-                    <a href="crea-tu-pagina-web.html" class="faded-link">
+                    <a href="#" onclick="loadEmprendePage('crea-tu-pagina-web.html'); return false;" class="faded-link">
                         <img src="assets/imgs/icono-crea-tu-pagina.png" alt="Crea tu página web">
                         <span>Crea tu página web</span>
                     </a>
@@ -100,13 +229,13 @@
                     </a>
                 </div>
                 <div class="steps step-13">
-                    <a href="apoyate-en-nosotros.html" class="faded-link">
+                    <a href="#" onclick="loadEmprendePage('apoyate-en-nosotros.html'); return false;" class="faded-link">
                         <img src="assets/imgs/icono-apoyate-en-nosotros.png" alt="Apóyate en nosotros">
                         <span>Apóyate en nosotros</span>
                     </a>
                 </div>
                 <div class="steps step-14">
-                    <a href="potencia-tus-negocios.html" class="faded-link">
+                    <a href="#" onclick="loadEmprendePage('potencia-tus-negocios.html'); return false;" class="faded-link">
                         <img src="assets/imgs/icono-potencia-tu-negocio.png" alt="Potencia tus negocios">
                         <span>Potencia tus negocios</span>
                     </a>
