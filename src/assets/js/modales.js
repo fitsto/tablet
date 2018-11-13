@@ -168,7 +168,42 @@ function abrirModal(elem, content, width) {
     target.classList.add('active');
 }
 
-$(document).on('click', 'page-ruta-emprende .open-modal_box', function(evt) {
+function openModalBox(self) {
+
+    var target;
+    var data_target = self.attributes['data-target'];
+    var data_content = self.attributes['data-content'];
+    var data_width = self.attributes['data-width'];
+    var width, content;
+
+    if (data_content !== null && data_content !== undefined && typeof data_content !== 'undefined') {
+        // Si tiene la propiedad data-content se le asigna a la variable
+        content = data_content.value.replace(/\u00A0/g, '');
+    } else {
+        // Si no tiene la propiedad data-content se le asigna false
+        content = false;
+    }
+
+    if (data_target !== null && data_target !== undefined && typeof data_target !== 'undefined') {
+        // Si tiene target se abre la modal con el target seleccionado
+        target = data_target.value.replace(/\u00A0/g, '');
+    } else {
+        // Si no tiene target, se le asigna false
+        target = false;
+    }
+
+    if (data_width !== null && data_width !== undefined && typeof data_width !== 'undefined') {
+        // Si tiene target se abre la modal con el target seleccionado
+        width = data_width.value.replace(/\u00A0/g, '');
+    } else {
+        // Si no tiene target, se le asigna false
+        width = false;
+    }
+
+    abrirModal(target, content, width);
+}
+
+/*$(document).on('click', 'page-ruta-emprende .open-modal_box', function(evt) {
     // Se les otorga el evento click, para abrir la modal
 
     var target;
@@ -202,14 +237,14 @@ $(document).on('click', 'page-ruta-emprende .open-modal_box', function(evt) {
     }
 
     abrirModal(target, content, width);
-});
+});*/
 
-$(document).on('click', 'page-ruta-emprende .open-modal_box', function(evt) {
+/*$(document).on('click', 'page-ruta-emprende .open-modal_box', function(evt) {
     // Se añade el evento para cerrar la modal haciendo click fuera del contenido
     if (evt.target.classList.contains('cont-int')) {
         //cerrarModal();
     }
-});
+});*/
 
 window.addEventListener('resize', function() {
     // Cuando se hace resize de la ventana,

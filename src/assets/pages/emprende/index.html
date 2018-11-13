@@ -1,4 +1,51 @@
 <script>
+    function checkInput(input, event = null) {
+        var value = $(input).val();
+        var resp;
+
+        if (value !== '' || value.length > 0) {
+            // Si se ingreso algo
+
+            if ($(input).is(':invalid')) {
+                // si es invalido
+                $(input).removeClass('valid');
+                $(input).addClass('invalid');
+                $(input).parent().parent().addClass('invalid');
+                resp = false;
+            } else {
+                // Si es correcto
+                $(input).addClass('valid');
+                $(input).removeClass('invalid');
+                $(input).parent().parent().removeClass('invalid');
+                resp = true;
+            }
+        } else {
+            // Si no se ingreso nada
+            if (event !== false) {
+                $(input).parent().parent().addClass('invalid');
+                $(input).removeClass('valid');
+                $(input).removeClass('invalid');
+                resp = false;
+            }
+        }
+
+        return resp;
+    }
+
+    function normalizeHeight(items) {
+        $(items).each(function(i, e) {
+            var width = $(e).width();
+            console.log(width);
+            if (width !== 0) {
+                $(e).css('height', width + 'px');
+            }
+        });
+    }
+
+    $(window).resize(function() {
+        normalizeHeight($('.steps li'));
+    });
+
     function loadEmprendePage(url) {
         var loaderEmprende = $('#page_emprende_loader');
 
@@ -17,113 +64,55 @@
                 }
             }, 300);
 
+            $('page-ruta-emprende .dropdown-header').on('click', function(e) {
+                e.preventDefault();
+
+                var parent = $(this).parent();
+                var content = $('.dropdown-content', parent);
+
+                if ($(content).is(':visible')) {
+                    $(content).slideUp(function() {
+                        $(parent).removeClass('active');
+                    });
+                } else {
+                    $('.dropdown-content').slideUp();
+                    $(content).slideDown(function() {
+                        $('.dropdown').removeClass('active');
+                        $(parent).addClass('active');
+                    });
+                }
+            });
+
+            $('page-ruta-emprende .return-false').on('click', function(e) {
+                e.preventDefault();
+            });
+
+            $('page-ruta-emprende .formulario input[type="submit"]').on('click', function(e) {
+                e.preventDefault();
+                var valid;
+
+                $('.formulario input').each(function(i, e) {
+                    var input = e;
+                    var type = $(input).attr('type');
+
+                    if (type !== 'submit' && type !== 'hidden') {
+                        if (checkInput($(input)) === true) {
+                            valid = true;
+                        } else {
+                            valid = false;
+                        }
+                    }
+                });
+
+                if (valid === true) {
+                    $('.formulario').submit();
+                }
+            });
+
             if (statusTxt === "error") {
                 console.log("Error: " + xhr.status + ": " + xhr.statusText);
             }
 
-        });
-
-        /*$(document).on('click', 'page-ruta-emprende a', function(evt) {
-            alert(1);
-            var url = $(evt.currentTarget).attr('href');
-            if (!url) return;
-            if (url.indexOf('www') > -1) return;
-            evt.preventDefault();
-            if (url.indexOf('#') > -1) return;
-            loadEmprendePage(url);
-        });*/
-
-        function checkInput(input, event = null) {
-            var value = $(input).val();
-            var resp;
-
-            if (value !== '' || value.length > 0) {
-                // Si se ingreso algo
-
-                if ($(input).is(':invalid')) {
-                    // si es invalido
-                    $(input).removeClass('valid');
-                    $(input).addClass('invalid');
-                    $(input).parent().parent().addClass('invalid');
-                    resp = false;
-                } else {
-                    // Si es correcto
-                    $(input).addClass('valid');
-                    $(input).removeClass('invalid');
-                    $(input).parent().parent().removeClass('invalid');
-                    resp = true;
-                }
-            } else {
-                // Si no se ingreso nada
-                if (event !== false) {
-                    $(input).parent().parent().addClass('invalid');
-                    $(input).removeClass('valid');
-                    $(input).removeClass('invalid');
-                    resp = false;
-                }
-            }
-
-            return resp;
-        }
-
-        function normalizeHeight(items) {
-            $(items).each(function(i, e) {
-                var width = $(e).width();
-                console.log(width);
-                if (width !== 0) {
-                    $(e).css('height', width + 'px');
-                }
-            });
-        }
-
-        $(window).resize(function() {
-            normalizeHeight($('.steps li'));
-        });
-
-
-        $(document).on('click', 'page-ruta-emprende .dropdown-header', function(e) {
-            e.preventDefault();
-
-            var parent = $(this).parent();
-            var content = $('.dropdown-content', parent);
-
-            if ($(content).is(':visible')) {
-                $(content).slideUp(function() {
-                    $(parent).removeClass('active');
-                });
-            } else {
-                $('.dropdown-content').slideUp();
-                $(content).slideDown(function() {
-                    $('.dropdown').removeClass('active');
-                    $(parent).addClass('active');
-                });
-            }
-        });
-
-        $(document).on('click', 'page-ruta-emprende .return-false', function(e) {
-            e.preventDefault();
-        });
-
-        $(document).on('click', 'page-ruta-emprende .formulario input[type="submit"]', function(e) {
-            e.preventDefault();
-            var valid;
-
-            $('.formulario input').each(function(i, e) {
-                var input = e;
-                var type = $(input).attr('type');
-
-                if (type !== 'submit' && type !== 'hidden') {
-                    if (checkInput($(input)) === true) {
-                        valid = true;
-                    } else {
-                        valid = false;
-                    }
-                }
-            });
-
-            if (valid === true) {
-                $('.formulario').submit();
-            }
         });
     }
 </script>
@@ -172,7 +161,7 @@
                     </a>
                 </div>
                 <div class="steps step-3 step-big">
-                    <a href="#" class="open-modal_box" data-target="#modal1">
+                    <a href="#" class="open-modal_box" onclick="openModalBox(this); return false;" data-target="#modal1">
                         <img src="assets/imgs/workcafe.png" alt="Instálate en WorkCafe Santander">
                     </a>
                 </div>
@@ -183,7 +172,7 @@
                     </a>
                 </div>
                 <div class="steps step-5 step-big">
-                    <a href="#" class="open-modal_box" data-target="#modal2">
+                    <a href="#" class="open-modal_box" onclick="openModalBox(this); return false;" data-target="#modal2">
                         <img src="assets/imgs/comunidad.png" alt="Participa en nuestra Comunidad WorkCafe">
                     </a>
                 </div>
@@ -218,7 +207,7 @@
                     </a>
                 </div>
                 <div class="steps step-11 step-big">
-                    <a href="#" class="open-modal_box" data-target="#modal3">
+                    <a href="#" class="open-modal_box" onclick="openModalBox(this); return false;" data-target="#modal3">
                         <img src="assets/imgs/asech.png" alt="Forma parte de ASECH">
                     </a>
                 </div>
@@ -241,7 +230,7 @@
                     </a>
                 </div>
                 <div class="steps step-15 step-big">
-                    <a href="#" class="open-modal_box" data-target="#modal4">
+                    <a href="#" class="open-modal_box" onclick="openModalBox(this); return false;" data-target="#modal4">
                         <img src="assets/imgs/ciclo-de-charlas.png" alt="Infórmate con nustro Ciclo de Charlas">
                     </a>
                 </div>

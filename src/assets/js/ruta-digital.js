@@ -1,4 +1,4 @@
-function loadPage(url) {
+/* function loadPage(url) {
     alert(1);
     var loader = $('#page_loader');
 
@@ -10,9 +10,9 @@ function loadPage(url) {
         }
 
     });
-}
+} */
 
-function loadEmprendePage(url) {
+/* function loadEmprendePage(url) {
     var loaderEmprende = $('#page_emprende_loader');
 
     $(loaderEmprende).load('assets/pages/emprende/' + url, function(responseTxt, statusTxt, xhr) {
@@ -35,4 +35,4 @@ function loadEmprendePage(url) {
         }
 
     });
-}
+} */
