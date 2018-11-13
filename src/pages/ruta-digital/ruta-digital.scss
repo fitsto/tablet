@@ -4,8 +4,28 @@ page-ruta-digital {
     }
     background-color: #fff;
     .contentRutaDigital {
-        margin-top: 2rem;
+        height: calc(100vh - 100px);
+        padding-top: 2rem;
         width: 100%;
+        .scroll-zoom-wrapper {
+            height: 100%;
+        }
+        .textoDetalle {
+            margin-top: 2rem;
+            height: calc(100% - 2rem);
+            main {
+                height: 100%;
+                section {
+                    height: 100%;
+                    .container {
+                        height: 100%;
+                    }
+                }
+            }
+            #page_loader {
+                height: 100%;
+            }
+        }
         .contentItemRuta {
             width: 100%;
             .itemRuta {
@@ -271,6 +291,7 @@ page-ruta-digital {
     }
     .steps li:last-of-type {
         margin-bottom: 0;
+        padding-bottom: 30px;
     }
     .steps li h2 {
         text-transform: uppercase;
