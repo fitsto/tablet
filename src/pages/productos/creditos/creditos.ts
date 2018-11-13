@@ -30,7 +30,7 @@ export class CreditosPage {
       textUrl: 'Comercial en cuotas'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'creditos',
+      producto: 'creditos',
       subProducto: 'Comercial en cuotas'
     });
   }
@@ -41,7 +41,7 @@ export class CreditosPage {
       textUrl: 'Compra de cartera'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'creditos',
+      producto: 'creditos',
       subProducto: 'Compra de cartera'
     });
   }
@@ -52,7 +52,7 @@ export class CreditosPage {
       textUrl: 'Libre disponibilidad'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'creditos',
+      producto: 'creditos',
       subProducto: 'Libre disponibilidad'
     });
   }
@@ -63,7 +63,7 @@ export class CreditosPage {
       textUrl: 'Life'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'creditos',
+      producto: 'creditos',
       subProducto: 'Life'
     });
   }
@@ -74,7 +74,7 @@ export class CreditosPage {
       textUrl: 'Cuadro manual'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'creditos',
+      producto: 'creditos',
       subProducto: 'Cuadro manual'
     });
   }
@@ -85,7 +85,7 @@ export class CreditosPage {
       textUrl: 'Cuota unica'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'creditos',
+      producto: 'creditos',
       subProducto: 'Cuota unica'
     });
   }
@@ -96,7 +96,7 @@ export class CreditosPage {
       textUrl: 'Garantia estatal'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'creditos',
+      producto: 'creditos',
       subProducto: 'Garantia estatal'
     });
   }
@@ -107,7 +107,7 @@ export class CreditosPage {
       textUrl: 'Linea credito automatica'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'creditos',
+      producto: 'creditos',
       subProducto: 'Linea credito automatica'
     });
   }
@@ -118,7 +118,7 @@ export class CreditosPage {
       textUrl: 'n+1'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'creditos',
+      producto: 'creditos',
       subProducto: 'n+1'
     });
   }

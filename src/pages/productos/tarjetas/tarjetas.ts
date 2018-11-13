@@ -31,7 +31,7 @@ export class TarjetasPage {
       textUrl: 'Gold'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Tarjetas',
+      producto: 'Tarjetas',
       subProducto: 'Gold'
     });
   }
@@ -42,7 +42,7 @@ export class TarjetasPage {
       textUrl: 'Life'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Tarjetas',
+      producto: 'Tarjetas',
       subProducto: 'Life'
     });
   }
@@ -53,7 +53,7 @@ export class TarjetasPage {
       textUrl: 'Limited'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Tarjetas',
+      producto: 'Tarjetas',
       subProducto: 'Limited'
     });
   }
@@ -64,7 +64,7 @@ export class TarjetasPage {
       textUrl: 'Platinium'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Tarjetas',
+      producto: 'Tarjetas',
       subProducto: 'Platinium'
     });
   }
@@ -75,7 +75,7 @@ export class TarjetasPage {
       textUrl: 'Super Puntos'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Tarjetas',
+      producto: 'Tarjetas',
       subProducto: 'Super Puntos'
     });
   }
@@ -86,7 +86,7 @@ export class TarjetasPage {
       textUrl: 'World Member'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Tarjetas',
+      producto: 'Tarjetas',
       subProducto: 'World Member'
     });
   }

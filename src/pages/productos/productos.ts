@@ -46,7 +46,7 @@ export class ProductosPage {
   goCreditos():void{
     this.navCtrl.push(CreditosPage);
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Creditos',
+      producto: 'Creditos',
       subProducto: ''
     });
   }
@@ -54,7 +54,7 @@ export class ProductosPage {
   goInversiones():void{
     this.navCtrl.push(InversionesPage);
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Inversiones',
+      producto: 'Inversiones',
       subProducto: ''
     });
   }
@@ -62,7 +62,7 @@ export class ProductosPage {
   goPlanes():void{
     this.navCtrl.push(PlanesPage);
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Planes',
+      producto: 'Planes',
       subProducto: ''
     });
   }
@@ -70,7 +70,7 @@ export class ProductosPage {
   goSeguros():void{
     this.navCtrl.push(SegurosPage);
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Seguros',
+      producto: 'Seguros',
       subProducto: ''
     });
   }
@@ -78,7 +78,7 @@ export class ProductosPage {
   goTarjetas():void{
     this.navCtrl.push(TarjetasPage);
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Tarjetas',
+      producto: 'Tarjetas',
       subProducto: ''
     });
   }

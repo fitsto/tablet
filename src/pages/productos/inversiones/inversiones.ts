@@ -32,7 +32,7 @@ export class InversionesPage {
     });
 
     this.genioService.dataGenio.intereses.push({
-      poducto: 'inversiones',
+      producto: 'inversiones',
       subProducto: 'Acciones'
     });
   }
@@ -43,7 +43,7 @@ export class InversionesPage {
       textUrl: 'APV'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'inversiones',
+      producto: 'inversiones',
       subProducto: 'APV'
     });
   }
@@ -54,7 +54,7 @@ export class InversionesPage {
       textUrl: 'DAP'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'inversiones',
+      producto: 'inversiones',
       subProducto: 'DAP'
     });
   }
@@ -65,7 +65,7 @@ export class InversionesPage {
       textUrl: 'FFMM'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'inversiones',
+      producto: 'inversiones',
       subProducto: 'FFMM'
     });
   }

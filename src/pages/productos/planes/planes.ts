@@ -30,7 +30,7 @@ export class PlanesPage {
       textUrl: 'In'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Planes',
+      producto: 'Planes',
       subProducto: 'In'
     });
   }
@@ -41,7 +41,7 @@ export class PlanesPage {
       textUrl: 'Life'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Planes',
+      producto: 'Planes',
       subProducto: 'Life'
     });
   }
@@ -52,7 +52,7 @@ export class PlanesPage {
       textUrl: 'Limited'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Planes',
+      producto: 'Planes',
       subProducto: 'Limited'
     });
   }
@@ -63,7 +63,7 @@ export class PlanesPage {
       textUrl: 'Santander Latam Pass'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Planes',
+      producto: 'Planes',
       subProducto: 'Santander Latam Pass'
     });
   }
@@ -74,7 +74,7 @@ export class PlanesPage {
       textUrl: 'Super Puntos'
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Planes',
+      producto: 'Planes',
       subProducto: 'Super Puntos'
     });
   }

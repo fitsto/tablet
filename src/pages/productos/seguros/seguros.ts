@@ -30,7 +30,7 @@ export class SegurosPage {
       textUrl: textUrl
     });
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Seguros',
+      producto: 'Seguros',
       subProducto: textUrl
     });
   }
