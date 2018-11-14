@@ -49,7 +49,7 @@ export class GenioServiceProvider {
 
   enviarDatos():void{
     let datosGenio:genioEnvioModel = this.dataGenio;
-    if(datosGenio.cliente.planFuturo) delete datosGenio.cliente.planFuturo;
+    //if(datosGenio.cliente.planFuturo) delete datosGenio.cliente.planFuturo;
     console.log(datosGenio);
     console.log(JSON.stringify(datosGenio));
     var headers = new HttpHeaders();
