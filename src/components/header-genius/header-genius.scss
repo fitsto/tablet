@@ -15,9 +15,10 @@ header-genius {
     ion-icon[name="arrow-back"] {
         justify-self: flex-start;
         position: absolute;
-        top: 1rem;
-        left: 2rem;
-        font-size: 3rem;
+        top: 0;
+        left: 0;
+        font-size: 4rem;
+        padding: 1rem 2rem;
     }
     [ion-button] {
         background-color: transparent;
