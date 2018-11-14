@@ -24,28 +24,28 @@ function stopBodyScrolling(bool) {
 function fadeOut(el) {
     // Animación fade out (cierre)
     el.style.opacity = 1;
-
-    (function fade() {
+    el.style.display = "none";
+    /*(function fade() {
         if ((el.style.opacity -= 0.1) < 0) {
             el.style.display = "none";
         } else {
             requestAnimationFrame(fade);
         }
-    })();
+    })();*/
 }
 
 function fadeIn(el) {
     // Animación fade in (apertura)
     el.style.opacity = 0;
     el.style.display = "block";
-
-    (function fade() {
+    el.style.opacity = 1;
+    /*(function fade() {
         var val = parseFloat(el.style.opacity);
         if (((val += 0.1) > 1) === false) {
             el.style.opacity = val;
             requestAnimationFrame(fade);
         }
-    })();
+    })();*/
 }
 
 function cerrarModal() {
@@ -61,15 +61,22 @@ function heightModal() {
     // Arregla el alto de la modal en responsive
     // Calcula en porcentaje el alto de la ventana y el alto del contenido de la modal
     var modal_overflow = document.querySelectorAll('.modal_box .modal_content .overflow');
+    console.log(modal_overflow);
     var windowsHeight = window.innerHeight;
     var maxHeight = Math.ceil(windowsHeight * 65 / 100);
 
     if (modal_overflow.length > 0) {
-        modal_overflow.forEach(function(element) {
+        for (var index = 0; index < modal_overflow.length; index++) {
+            var element = modal_overflow[index];
             element.style.overflow = 'auto';
             element.style.maxHeight = maxHeight + 'px';
             element.style.paddingRight = '15px';
-        });
+        }
+        /*modal_overflow.forEach(function(element) {
+            element.style.overflow = 'auto';
+            element.style.maxHeight = maxHeight + 'px';
+            element.style.paddingRight = '15px';
+        });*/
     } else {
         return false;
     }

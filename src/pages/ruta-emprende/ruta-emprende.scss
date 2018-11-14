@@ -14,6 +14,7 @@ page-ruta-emprende {
     #page_emprende_loader {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
     }
     #page_emprende_loader {
         height: 100%;
@@ -983,7 +984,8 @@ page-ruta-emprende {
         width: 100%;
         position: fixed;
         left: 0;
-        bottom: 0;
+        bottom: 50px;
+        max-height: 190px;
     }
     .footer-fixed .overlay {
         width: 100%;
@@ -1398,6 +1400,14 @@ page-ruta-emprende {
         background-size: 100%;
         vertical-align: middle;
         margin-right: 10px;
+    }
+    .asech-list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .asech-list li {
+        width: 30%;
     }
     @media screen and (max-width: 768px) {
         .content .container,
