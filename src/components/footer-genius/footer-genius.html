@@ -1,5 +1,6 @@
 <!-- Generated template for the FooterGeniusComponent component -->
 <div class="flex jc-sb w-100p" [ngClass]="theme">
+    <ion-icon ios="ios-wifi" md="ios-wifi" class="ico-conectado" [ngClass]="{'desconectado': !this.genioService.conectado}"></ion-icon>
     <bread-crumb [inicio]="inicio" texto="{{texto}}" class="flex" *ngIf="inicio != 'ocultar'"></bread-crumb>
     <ion-icon ios="ios-person" md="md-person" (click)="goCliente()"></ion-icon>
 </div>

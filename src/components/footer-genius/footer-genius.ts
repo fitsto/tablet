@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ClientePage } from '../../pages/cliente/cliente';
+import { GenioServiceProvider } from '../../providers/genio-service/genio-service';
 
 /**
  * Generated class for the FooterGeniusComponent component.
@@ -17,7 +18,7 @@ export class FooterGeniusComponent{
   @Input() public texto:string;
   @Input() public theme:string = 'default';
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public genioService:GenioServiceProvider) {
     
   }
 

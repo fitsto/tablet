@@ -1,7 +1,7 @@
 footer-genius {
     width: 100%;
     height: 50px;
-    padding: 0 3rem;
+    padding: 0 3rem 0 5rem;
     ion-icon {
         font-size: 5rem;
     }
@@ -10,5 +10,15 @@ footer-genius {
     }
     .light ion-icon.icon.icon-md.ion-md-person {
         color: $gPrimary;
+    }
+    .ico-conectado {
+        position: fixed;
+        bottom: .5rem;
+        left: 1rem;
+        font-size: 3rem;
+        color: $cuarto;
+    }
+    .ico-conectado.desconectado {
+        color: $quinto;
     }
 }
