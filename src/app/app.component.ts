@@ -19,6 +19,7 @@ export class MyApp {
 
   @ViewChild(Nav) navCtrl: Nav;
   rootPage:any = LoginPage;
+  con:boolean = true;
 
   constructor(
     platform: Platform, 
@@ -60,11 +61,16 @@ export class MyApp {
       console.log('network was disconnected :-(');
       this.toastService.presentToast('Sin Internet, solo guardado local');
       this.genioService.conectado = false;
+      //this.genioService.emitConetado(false);
+      this.con = false;
     });
 
     this.network.onConnect().subscribe(() => {
       console.log('network connected!');
+      this.toastService.presentToast('Con Internet');
       this.genioService.conectado = true;
+      //this.genioService.emitConetado(true);
+      this.con = true;
     });
   }
 

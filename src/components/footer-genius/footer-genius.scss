@@ -11,14 +11,4 @@ footer-genius {
     .light ion-icon.icon.icon-md.ion-md-person {
         color: $gPrimary;
     }
-    .ico-conectado {
-        position: fixed;
-        bottom: .5rem;
-        left: 1rem;
-        font-size: 3rem;
-        color: $cuarto;
-    }
-    .ico-conectado.desconectado {
-        color: $quinto;
-    }
 }

@@ -241,3 +241,15 @@ li {
 .oculto2 {
     display: none;
 }
+
+.ico-conectado {
+    position: fixed;
+    bottom: .5rem;
+    left: 1rem;
+    font-size: 3rem;
+    color: $cuarto;
+}
+
+.ico-conectado.desconectado {
+    color: $quinto;
+}
