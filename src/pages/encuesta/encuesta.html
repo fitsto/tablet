@@ -12,7 +12,7 @@
                     <ion-option value="curioso">curioso</ion-option>
                 </ion-select>
             </ion-item>
-            <ion-item>
+            <ion-item *ngIf="visible">
                 <ion-label>Es Cliente</ion-label>
                 <ion-select [(ngModel)]="genioService.dataGenio.encuesta.esCliente">
                     <ion-option value="true">Si</ion-option>
@@ -39,7 +39,7 @@
                 </ion-select>
             </ion-item>
 
-            <ion-item>
+            <ion-item *ngIf="visible">
                 <ion-label>ocupacion</ion-label>
                 <ion-select [(ngModel)]="genioService.dataGenio.encuesta.ocupacion">
                     <ion-option value="Emprendedor">Emprendedor</ion-option>
@@ -50,7 +50,7 @@
                 </ion-select>
             </ion-item>
 
-            <ion-item>
+            <ion-item *ngIf="visible">
                 <ion-label>Uso WorkCafe</ion-label>
                 <ion-select [(ngModel)]="genioService.dataGenio.encuesta.uso" multiple="true">
                     <ion-option value="salas">salas</ion-option>
@@ -64,7 +64,7 @@
             <ion-item>
                 <ion-textarea placeholder="Resumen Atencion" [(ngModel)]="genioService.dataGenio.encuesta.resumenAtencion"></ion-textarea>
             </ion-item>
-            <ion-item>
+            <ion-item *ngIf="visible">
                 <ion-textarea placeholder="compromisos" [(ngModel)]="genioService.dataGenio.encuesta.compromisos"></ion-textarea>
             </ion-item>
         </ion-list>

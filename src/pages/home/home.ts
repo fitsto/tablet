@@ -90,6 +90,6 @@ export class HomePage {
     this.genioService.iniciarInteraccionCliente();
     this.genioService.dataGenio.rechazo = true;
     this.genioService.terminarInteraccion(this.clienteService.cliente);
-    this.navCtrl.push(EncuestaPage);
+    this.navCtrl.push(EncuestaPage, {rechazo: true});
   }
 }

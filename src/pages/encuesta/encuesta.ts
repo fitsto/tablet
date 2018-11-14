@@ -18,7 +18,7 @@ import { ToastServiceProvider } from '../../providers/toast-service/toast-servic
   templateUrl: 'encuesta.html',
 })
 export class EncuestaPage {
-
+  public visible:boolean = true;
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -33,6 +33,9 @@ export class EncuestaPage {
     //console.log('ionViewDidLoad EncuestaPage');
     /*this.santanderService.resumenAtencion = '';
     this.santanderService.compromisos = '';*/
+    if (this.navParams.get('rechazo')) {
+      this.visible = false;
+    }
   }
 
   enviarDataGenio():void{
