@@ -28,7 +28,7 @@ export class InicioRutaPage {
   goRutaEmprende():void{
     this.navCtrl.push(RutaEmprendePage);
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Ruta Emprende',
+      producto: 'Ruta Emprende',
       subProducto: ''
     });
   }
@@ -36,7 +36,7 @@ export class InicioRutaPage {
   goRutaDigital():void{
     this.navCtrl.push(RutaDigitalPage);
     this.genioService.dataGenio.intereses.push({
-      poducto: 'Ruta Digital',
+      producto: 'Ruta Digital',
       subProducto: ''
     });
   }
