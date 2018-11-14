@@ -22,7 +22,7 @@ export class FooterGeniusComponent{
   }
 
   goCliente():void{
-    console.log(typeof this.inicio);
+    //console.log(typeof this.inicio);
     this.navCtrl.push(ClientePage);
   }
 
