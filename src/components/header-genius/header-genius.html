@@ -3,7 +3,7 @@
     <ion-icon name="arrow-back" (click)="goBack()" *ngIf="back"></ion-icon>
     <img *ngIf="theme != 'light'" src="assets/imgs/santander_logo.png" alt="Santander">
     <img *ngIf="theme == 'light'" src="assets/imgs/santander_logo_red.png" alt="Santander">
-    <button ion-button menuToggle="rightMenu" [ngClass]="theme">
+    <button ion-button menuToggle="rightMenu" [ngClass]="theme" *ngIf="menu">
             <ion-icon name="menu"></ion-icon>
     </button>
 </div>
