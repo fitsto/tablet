@@ -61,7 +61,6 @@ function heightModal() {
     // Arregla el alto de la modal en responsive
     // Calcula en porcentaje el alto de la ventana y el alto del contenido de la modal
     var modal_overflow = document.querySelectorAll('.modal_box .modal_content .overflow');
-    console.log(modal_overflow);
     var windowsHeight = window.innerHeight;
     var maxHeight = Math.ceil(windowsHeight * 65 / 100);
 
