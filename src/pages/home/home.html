@@ -4,11 +4,12 @@
 
 
     <div class="formIngresoRut">
-        <div class="label">Ingrese rut a consultar</div>
+        <!-- <div class="label">Ingrese rut a consultar</div>
         <div class="inputContent">
             <ion-input type="text" placeholder="9.999.999-9" [(ngModel)]="rut" formato-rut (rutChange)="rutChange($event)" (keydown)="onKeydown($event)"></ion-input>
-        </div>
+        </div> -->
 
-        <button ion-button block large color="secondary" (click)="goPaginaCliente()">Iniciar</button>
+        <button ion-button block large color="secondary" (click)="goPaginaCliente()">Iniciar Atención</button>
+        <button ion-button block large color="danger" (click)="rechazo()">No Interesado</button>
     </div>
 </ion-content>

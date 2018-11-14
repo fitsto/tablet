@@ -4,6 +4,7 @@ import { ClienteServiceProvider } from '../../providers/cliente-service/cliente-
 import { RutProvider } from '../../providers/rut/rut';
 import { GenioServiceProvider } from '../../providers/genio-service/genio-service';
 import { InicioRutaPage } from '../inicio-ruta/inicio-ruta';
+import { EncuestaPage } from '../encuesta/encuesta';
 
 //@IonicPage({name:'home', segment:'/'})
 @Component({
@@ -80,5 +81,15 @@ export class HomePage {
       this.navCtrl.push(InicioRutaPage);
     }
     this.rut = '';
+  }
+
+  rechazo():void{
+    this.clienteService.rut = null;
+    this.clienteService.dv = null;
+    this.clienteService.iniciarCliente(this.rut);
+    this.genioService.iniciarInteraccionCliente();
+    this.genioService.dataGenio.rechazo = true;
+    this.genioService.terminarInteraccion(this.clienteService.cliente);
+    this.navCtrl.push(EncuestaPage);
   }
 }
