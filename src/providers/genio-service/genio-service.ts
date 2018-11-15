@@ -9,7 +9,7 @@ import { genioEnvioModel } from '../../models/genio-envio-model';
 @Injectable()
 export class GenioServiceProvider {
   
-  public conectado:boolean = true;
+  public conectado:boolean = false;
   genio: personaModel;
   dataGenio:genioModel;
   constructor(public http: HttpClient) {

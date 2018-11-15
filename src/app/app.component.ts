@@ -19,7 +19,7 @@ export class MyApp {
 
   @ViewChild(Nav) navCtrl: Nav;
   rootPage:any = LoginPage;
-  con:boolean = true;
+  con:boolean = false;
 
   constructor(
     platform: Platform, 
@@ -57,11 +57,15 @@ export class MyApp {
   }
 
   private conectado(){
+    if (this.network.type !== this.network.Connection.NONE && this.network.type !== this.network.Connection.UNKNOWN) {
+      this.genioService.conectado = true;
+      this.con = true;
+      this.toastService.presentToast('Con Internet');
+    }
     this.network.onDisconnect().subscribe(() => {
       console.log('network was disconnected :-(');
       this.toastService.presentToast('Sin Internet, solo guardado local');
       this.genioService.conectado = false;
-      //this.genioService.emitConetado(false);
       this.con = false;
     });
 
@@ -69,7 +73,6 @@ export class MyApp {
       console.log('network connected!');
       this.toastService.presentToast('Con Internet');
       this.genioService.conectado = true;
-      //this.genioService.emitConetado(true);
       this.con = true;
     });
   }
